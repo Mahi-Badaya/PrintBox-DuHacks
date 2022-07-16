@@ -88,6 +88,15 @@ class Profile extends StatelessWidget {
                 Icon(Icons.sort_rounded,color: Color(0xff22215b),),
               ],
             ),
+            // ListView(
+            //
+            // ),
+            ListTile(
+              leading: Icon(Icons.file_copy,color: Colors.blue,),
+              title: Text('Projects.docx',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 16),),
+              subtitle: Text('Novemeber 22,2022',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 12)),
+              trailing: Text('200 kb',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 11)),
+            ),
           ],
         ),
       ),
