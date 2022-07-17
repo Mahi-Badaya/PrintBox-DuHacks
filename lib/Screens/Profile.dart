@@ -118,6 +118,35 @@ class Profile extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {showDialog(context: context, builder: (context){
+          return AlertDialog(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            elevation: 16,
+            content: Wrap(
+              children: [
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Select File Destination',style: TextStyle(color: Color(0xff22215b),fontSize: 18),),
+                      SizedBox(height: 30,),
+                      TextButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context)=><fill it>()));  },
+                       child: Text('Select from my folders',style: TextStyle(color: Color(0xff22215b),fontSize: 16) )),
+                      SizedBox(height: 20,),
+                      Text('Select from device',style: TextStyle(color: Color(0xff22215b),fontSize: 16) ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          );
+        });
+        },
+        backgroundColor: Color(0xff22215b),
+        child: const Icon(Icons.print_outlined),
+      ),
     );
   }
 }
