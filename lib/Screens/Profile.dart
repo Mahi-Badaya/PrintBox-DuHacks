@@ -12,7 +12,7 @@ class Profile extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xfffbfbfb),
       appBar: PreferredSize(
-        preferredSize:  Size.fromHeight(height*0.1),
+        preferredSize:  Size.fromHeight(height*0.09),
         child: AppBar(
           automaticallyImplyLeading: false,
           elevation: 0,
@@ -30,7 +30,7 @@ class Profile extends StatelessWidget {
           children: [
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
-              height: height*0.27,
+              height: height*0.23,
               width: width,
               decoration: BoxDecoration(
                 color: Color(0xffffffff),
@@ -98,11 +98,22 @@ class Profile extends StatelessWidget {
                 Icon(Icons.sort_rounded,color: Color(0xff22215b),),
               ],
             ),
-            ListTile(
-              leading: Icon(Icons.file_copy,color: Colors.blue,),
-              title: Text('Projects.docx',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 16),),
-              subtitle: Text('Novemeber 22,2022',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 12)),
-              trailing: Text('200 kb',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 11)),
+            SizedBox(height: height*0.02,),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    ListTile(
+                      leading: Image.asset('assets/icons/docx.png'),
+                      title: Text('Projects.docx',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 16),),
+                      subtitle: Text('Novemeber 22,2022',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 12)),
+                      trailing: Text('200 kb',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 11)),
+                    ),
+                  ],
+                );
+              }),
             ),
           ],
         ),
