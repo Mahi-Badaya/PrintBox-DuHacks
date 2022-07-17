@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:printbox/Screens/orderStatus.dart';
 
 class Success extends StatelessWidget {
   const Success({Key? key}) : super(key: key);
@@ -27,7 +28,7 @@ class Success extends StatelessWidget {
             SizedBox(height: height*0.3,),
             Center(
               child: ElevatedButton(
-                onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Success())); },
+                onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderStatus())); },
                 style: ElevatedButton.styleFrom(
                   minimumSize:  Size(width*0.9, height*0.07),
                   maximumSize: Size (width*0.9, height*0.1),
