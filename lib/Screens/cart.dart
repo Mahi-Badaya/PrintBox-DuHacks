@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:printbox/Components/TextSpace.dart';
+import 'package:printbox/Screens/success.dart';
 
 class Cart extends StatelessWidget {
   const Cart({Key? key}) : super(key: key);
@@ -88,7 +89,7 @@ class Cart extends StatelessWidget {
             Spacer(),
             Center(
               child: ElevatedButton(
-                onPressed: (){ },
+                onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Success())); },
                 style: ElevatedButton.styleFrom(
                   minimumSize:  Size(width*0.9, height*0.07),
                   maximumSize: Size (width*0.9, height*0.1),
