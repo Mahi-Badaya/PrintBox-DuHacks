@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Components/CustomBox.dart';
+
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
 
@@ -33,6 +35,14 @@ class Profile extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Color(0xffffffff),
                 borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 3,
+                    blurRadius: 7,
+                    offset: Offset(1, 3),
+                  ),
+                ],
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -66,16 +76,16 @@ class Profile extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CustomBox(height: height, width: width, colour: Colors.blue, image: 'assets/images/folder-blue.png', title: 'Minor Project',),
-                    CustomBox(height: height, width: width, colour: Colors.yellow, image: 'assets/images/folder-yellow.png', title: 'Buisness Models',),
+                    CustomBox(height: height, width: width, colour: Color(0xff415eb6), image: 'assets/images/folder-blue.png', title: 'Minor Project', backgroundColor: Color((0xffeef7fe)),),
+                    CustomBox(height: height, width: width, colour: Color(0xffffb110), image: 'assets/images/folder-yellow.png', title: 'Buisness Models', backgroundColor: Color(0xfffffbec),),
                   ],
                 ),
                 SizedBox(height: height*0.02,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CustomBox(height: height, width: width, colour: Colors.red, image: 'assets/images/folder-red.png', title: 'Personal Docs',),
-                    CustomBox(height: height, width: width, colour: Colors.greenAccent, image: 'assets/images/folder-green.png', title: 'Posters',),
+                    CustomBox(height: height, width: width, colour: Color(0xffac4040), image: 'assets/images/folder-red.png', title: 'Personal Docs', backgroundColor: Color(0xfffeeeee),),
+                    CustomBox(height: height, width: width, colour: Color(0xff23b0b0), image: 'assets/images/folder-green.png', title: 'Posters', backgroundColor: Color(0xfff0ffff),),
                   ],
                 ),
               ],
@@ -88,9 +98,6 @@ class Profile extends StatelessWidget {
                 Icon(Icons.sort_rounded,color: Color(0xff22215b),),
               ],
             ),
-            // ListView(
-            //
-            // ),
             ListTile(
               leading: Icon(Icons.file_copy,color: Colors.blue,),
               title: Text('Projects.docx',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 16),),
@@ -104,40 +111,3 @@ class Profile extends StatelessWidget {
   }
 }
 
-class CustomBox extends StatelessWidget {
-  const CustomBox({Key? key, required this.height, required this.width, required this.colour, required this.image, required this.title,}) : super(key: key);
-
-  final double height;
-  final double width;
-  final Color colour;
-  final String image;
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 14,vertical: 14),
-      height: height*0.14,
-      width: width*0.4,
-      decoration: BoxDecoration(
-        color: colour.withOpacity(0.2),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Image.asset(image),
-              Icon(Icons.more_vert,color: colour,),
-            ],
-          ),
-          SizedBox(height: height*0.02,),
-          Text(title,style: TextStyle(color: colour,fontStyle: FontStyle.italic,fontSize: 16),),
-          Text('Novemeber 22,2022',style: TextStyle(color: colour,fontStyle: FontStyle.italic,fontSize: 12)),
-        ],
-      ),
-    );
-  }
-}
