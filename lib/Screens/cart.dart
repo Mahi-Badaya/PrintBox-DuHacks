@@ -42,7 +42,7 @@ class Cart extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Kumawat Madarchod',style: TextStyle(color: Colors.white,fontSize: 20),),
+                  Text('Kumawat',style: TextStyle(color: Colors.white,fontSize: 20),),
                   Text('Printing Press Ltd.',style: TextStyle(color: Colors.white),),
                 ],
               ),

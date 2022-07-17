@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:printbox/Screens/SelectFolder.dart';
 
 import '../Components/CustomBox.dart';
-import 'PersonalProjects.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -51,7 +50,7 @@ class Profile extends StatelessWidget {
                 children: [
                   Image.asset('assets/images/profile.png'),
                   SizedBox(height: height*0.01,),
-                  Text('John Doe Chacha',style: TextStyle(color: Color(0xff22215b),fontSize: 20,fontStyle: FontStyle.italic),),
+                  Text('John Doe',style: TextStyle(color: Color(0xff22215b),fontSize: 20,fontStyle: FontStyle.italic),),
                   SizedBox(height: height*0.01,),
                   Text('Lets Get your Printout',style: TextStyle(color: Color(0xff22215b),fontSize: 15),),
                   SizedBox(height: height*0.01,),

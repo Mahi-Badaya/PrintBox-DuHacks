@@ -70,7 +70,7 @@ class PersonalProjects extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>ShopkeeperSelection())); },
         backgroundColor: Color(0xff22215b),
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.print_outlined),
       ),
     );
   }
