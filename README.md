@@ -37,7 +37,7 @@ The app is currently release with version code of 1.0 . You can access the relea
 		<td>
     Mahi Badaya
 		<p align="center">
-			<img src = "https://avatars.githubusercontent.com/u/78249282?s=64&v=4" width="150" height="150" >
+			<img src = "https://avatars.githubusercontent.com/u/78249282" width="150" height="150" >
 		</p>
 			<p align="center">
 				<a href = "https://github.com/Mahi-Badaya">
@@ -51,7 +51,7 @@ The app is currently release with version code of 1.0 . You can access the relea
     <td>
 		Kaushal Kishore
 		<p align="center">
-			<img src = "https://avatars.githubusercontent.com/u/72066799?s=64&v=4" width="150" height="150" >
+			<img src = "https://avatars.githubusercontent.com/u/72066799" width="150" height="150" >
 		</p>
 			<p align="center">
 				<a href = "https://github.com/Kaushal-Kishore-Gupta">
