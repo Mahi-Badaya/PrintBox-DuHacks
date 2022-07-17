@@ -19,7 +19,7 @@ class PersonalProjects extends StatelessWidget {
           title: Text('Personal Docs', style: TextStyle(fontStyle: FontStyle.italic, color: Color(0xff22215b),fontSize: 25),),
           actions: [
             TextButton(onPressed: () {  },
-              child: Text('::',style: TextStyle(color: Color(0xff22215b),fontSize: 40,fontWeight: FontWeight.bold),)),
+              child: Text('::',style: TextStyle(color:  Color(0xff22215b),fontSize: 40,fontWeight: FontWeight.bold),)),
           ],
         ),
       ),
