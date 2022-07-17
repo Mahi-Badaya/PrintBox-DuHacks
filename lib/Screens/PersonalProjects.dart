@@ -66,8 +66,13 @@ class PersonalProjects extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Color(0xff22215b),
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
 List<String> images = ["assets/icons/docx.png", "assets/icons/ppt.png", "assets/icons/excel.png","assets/icons/pdf.png"];
-List<String> names = ['Projects.docx', 'Projects.ppt', 'Projects.xls','Projects.pdf'];
+List<String> names = ['Lab.docx', 'Projects.ppt', 'Projects.xls','Projects.pdf'];
