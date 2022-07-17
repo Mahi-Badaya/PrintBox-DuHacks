@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'cart.dart';
+
 class ShopkeeperSelection extends StatelessWidget {
   const ShopkeeperSelection({Key? key}) : super(key: key);
 
@@ -37,7 +39,7 @@ class ShopkeeperSelection extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context=>daf())));},
+        onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart()));},
         backgroundColor: Color(0xff22215b),
         child: const Icon(Icons.print_outlined),
       ),
