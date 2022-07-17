@@ -43,6 +43,9 @@ The app is currently release with version code of 1.0 . You can access the relea
 				<a href = "https://github.com/Mahi-Badaya">
 					<img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/>
 				</a>
+				<a href = "https://www.linkedin.com/in/mahibadaya/">
+					<img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36" alt="LinkedIn"/>
+				</a>
 			</p>
 		</td>
     <td>
@@ -53,6 +56,9 @@ The app is currently release with version code of 1.0 . You can access the relea
 			<p align="center">
 				<a href = "https://github.com/Kaushal-Kishore-Gupta">
 					<img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/>
+				</a>
+				<a href = "https://www.linkedin.com/in/kaushal-kishore-gupta/">
+					<img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36" alt="LinkedIn"/>
 				</a>
 			</p>
 		</td>
