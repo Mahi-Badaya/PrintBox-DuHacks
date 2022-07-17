@@ -1,9 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:printbox/Components/model.dart';
 import 'package:printbox/Components/search.dart';
 import 'package:printbox/Screens/shopkeeperSelection.dart';
 
-class PersonalProjects extends StatelessWidget {
+class PersonalProjects extends StatefulWidget {
   const PersonalProjects({Key? key}) : super(key: key);
+
+  @override
+  State<PersonalProjects> createState() => _PersonalProjectsState();
+}
+
+class _PersonalProjectsState extends State<PersonalProjects> {
+
+  List<FileDetails> files =[
+    FileDetails( 'assets/icons/docx.png', 'Lab.docx',false),
+    FileDetails( 'assets/icons/ppt.png','Projects.ppt', false),
+    FileDetails('assets/icons/excel.png', 'Projects.xls', false),
+    FileDetails( 'assets/icons/pdf.png','Projects.pdf', false),
+  ];
+
+  Widget FileItem(String names, String images, bool isSelected, int index){
+    return ListTile(
+      leading: Image.asset(images),
+      title: Text(names,style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 16),),
+      subtitle: Text('July 17,2022',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 12)),
+      trailing: isSelected ? Icon(Icons.check_circle , color: Colors.green[700],) : Icon(Icons.check_circle_outline, color: Colors.grey,),
+      onTap: (){
+        setState ((){
+          files[index].isSelected = !files[index].isSelected;
+          if( files[index]. isSelected == true){
+            selectedFiles.add(FileDetails(names, images, true));
+          }else if(files[index]. isSelected == false){
+            selectedFiles.removeWhere ((element) => element.names == files[index].names);
+          }
+        });
+      },
+    );
+  }
+
+  List <FileDetails> selectedFiles = [];
 
   @override
   Widget build(BuildContext context) {
@@ -45,24 +80,9 @@ class PersonalProjects extends StatelessWidget {
           SizedBox(height: height*0.04,),
           Expanded(
             child: ListView.builder(
-                itemCount: 4,
+                itemCount: files.length,
                 itemBuilder: (context, index) {
-                  return Column(
-                    children: [
-                      ListTile(
-                        leading: Image.asset(images[index]),
-                        title: Text(names[index],style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 16),),
-                        subtitle: Text('July 17,2022',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 12)),
-                        trailing: Text('200 kb',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 11)),
-                      ),
-                      ListTile(
-                        leading: Image.asset(images[index]),
-                        title: Text(names[index],style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 16),),
-                        subtitle: Text('Novemeber 22,2022',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 12)),
-                        trailing: Text('320 kb',style: TextStyle(color: Color(0xff22215b),fontStyle: FontStyle.italic,fontSize: 11)),
-                      ),
-                    ],
-                  );
+                  return FileItem(files[index].images,files[index].names,files[index].isSelected, index);
                 }),
           ),
         ],
@@ -75,5 +95,6 @@ class PersonalProjects extends StatelessWidget {
     );
   }
 }
-List<String> images = ["assets/icons/docx.png", "assets/icons/ppt.png", "assets/icons/excel.png","assets/icons/pdf.png"];
-List<String> names = ['Lab.docx', 'Projects.ppt', 'Projects.xls','Projects.pdf'];
+
+
+
