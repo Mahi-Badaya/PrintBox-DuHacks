@@ -16,7 +16,7 @@ class PersonalProjects extends StatelessWidget {
           automaticallyImplyLeading: false,
           elevation: 0,
           backgroundColor: Color(0xfffbfbfb),
-          title: Text('Personal Projects', style: TextStyle(fontStyle: FontStyle.italic, color: Color(0xff22215b),fontSize: 25),),
+          title: Text('Personal Docs', style: TextStyle(fontStyle: FontStyle.italic, color: Color(0xff22215b),fontSize: 25),),
           actions: [
             TextButton(onPressed: () {  },
               child: Text('::',style: TextStyle(color: Color(0xff22215b),fontSize: 40,fontWeight: FontWeight.bold),)),

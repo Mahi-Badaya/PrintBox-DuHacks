@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:printbox/Screens/SelectFolder.dart';
 
 import '../Components/CustomBox.dart';
 import 'PersonalProjects.dart';
@@ -133,7 +134,7 @@ class Profile extends StatelessWidget {
                     children: [
                       Text('Select File Destination',style: TextStyle(color: Color(0xff22215b),fontSize: 19),),
                       SizedBox(height: 20,),
-                      TextButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context)=>PersonalProjects()));  },
+                      TextButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectFolder()));  },
                        child: Text('Select from my folders',style: TextStyle(color: Color(0xff22215b),fontSize: 17) )),
                       SizedBox(height: 10,),
                       TextButton(onPressed: () {  },
