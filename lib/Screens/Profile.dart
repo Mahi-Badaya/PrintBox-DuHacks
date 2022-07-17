@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Components/CustomBox.dart';
+import 'PersonalProjects.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -130,12 +131,13 @@ class Profile extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Select File Destination',style: TextStyle(color: Color(0xff22215b),fontSize: 18),),
-                      SizedBox(height: 30,),
-                      TextButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context)=><fill it>()));  },
-                       child: Text('Select from my folders',style: TextStyle(color: Color(0xff22215b),fontSize: 16) )),
+                      Text('Select File Destination',style: TextStyle(color: Color(0xff22215b),fontSize: 19),),
                       SizedBox(height: 20,),
-                      Text('Select from device',style: TextStyle(color: Color(0xff22215b),fontSize: 16) ),
+                      TextButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context)=>PersonalProjects()));  },
+                       child: Text('Select from my folders',style: TextStyle(color: Color(0xff22215b),fontSize: 17) )),
+                      SizedBox(height: 10,),
+                      TextButton(onPressed: () {  },
+                       child: Text('Select from device',style: TextStyle(color: Color(0xff22215b),fontSize: 17) )),
                     ],
                   ),
                 ),
