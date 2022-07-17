@@ -1,11 +1,17 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:printbox/Screens/SelectFolder.dart';
 
 import '../Components/CustomBox.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
 
+  @override
+  State<Profile> createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -136,7 +142,11 @@ class Profile extends StatelessWidget {
                       TextButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectFolder()));  },
                        child: Text('Select from my folders',style: TextStyle(color: Color(0xff22215b),fontSize: 17) )),
                       SizedBox(height: 10,),
-                      TextButton(onPressed: () {  },
+                      TextButton(onPressed: () async {
+                        final result = await FilePicker.platform.pickFiles();
+                        if(result == null) return;
+
+                      },
                        child: Text('Select from device',style: TextStyle(color: Color(0xff22215b),fontSize: 17) )),
                     ],
                   ),
@@ -149,7 +159,9 @@ class Profile extends StatelessWidget {
         backgroundColor: Color(0xff22215b),
         child: const Icon(Icons.print_outlined),
       ),
+
     );
+
   }
 }
 
